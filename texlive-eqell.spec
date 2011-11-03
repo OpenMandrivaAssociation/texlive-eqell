@@ -1,3 +1,9 @@
+# revision 22931
+# category Package
+# catalog-ctan /macros/latex/contrib/eqell
+# catalog-date 2011-05-29 19:51:14 +0200
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-eqell
 Version:	20110529
 Release:	1
@@ -39,6 +45,7 @@ after !, ?, !? or ?!.
 %doc %{_texmfdistdir}/doc/latex/eqell/README
 %doc %{_texmfdistdir}/doc/latex/eqell/eqell.pdf
 %doc %{_texmfdistdir}/doc/latex/eqell/eqell.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,3 +56,5 @@ after !, ?, !? or ?!.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
