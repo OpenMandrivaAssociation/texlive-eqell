@@ -1,18 +1,12 @@
-# revision 22931
-# category Package
-# catalog-ctan /macros/latex/contrib/eqell
-# catalog-date 2011-05-29 19:51:14 +0200
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-eqell
-Version:	20190228
+Version:	22931
 Release:	1
 Summary:	Sympathetically spaced ellipsis after punctuation
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/eqell
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqell.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqell.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqell.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqell.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ The package provides commands that give a well-spaced ellipsis
 after !, ?, !? or ?!.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -39,24 +33,10 @@ after !, ?, !? or ?!.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110529-2
-+ Revision: 751536
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110529-1
-+ Revision: 718355
-- texlive-eqell
-- texlive-eqell
-- texlive-eqell
-- texlive-eqell
-
