@@ -1,6 +1,6 @@
 Name:		texlive-eqell
 Version:	22931
-Release:	1
+Release:	2
 Summary:	Sympathetically spaced ellipsis after punctuation
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/eqell
