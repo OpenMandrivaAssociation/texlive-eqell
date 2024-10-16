@@ -3,7 +3,7 @@ Version:	22931
 Release:	2
 Summary:	Sympathetically spaced ellipsis after punctuation
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/eqell
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/eqell
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqell.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqell.doc.r%{version}.tar.xz
